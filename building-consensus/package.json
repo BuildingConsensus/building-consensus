@@ -1,7 +1,7 @@
 {
   "name": "building-consensus",
   "private": true,
-  "homepage": "https://BuildingConsensus.github.io/building-consensus",
+  "homepage": "https://BuildingConsensus.github.io/building-consensus/building-consensus",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
