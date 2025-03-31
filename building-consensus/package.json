@@ -1,7 +1,7 @@
 {
   "name": "building-consensus",
   "private": true,
-  "homepage": "https://BuildingConsensus.github.io/building-consensus/building-consensus",
+  "homepage": "https://BuildingConsensus.github.io/building-consensus/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
