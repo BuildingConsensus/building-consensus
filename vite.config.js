@@ -7,6 +7,6 @@ export default defineConfig({
     host: '127.0.0.1'
   },
   plugins: [react()],
-  base: '/',
+  base: '/building-consensus/',
 })
 
