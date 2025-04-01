@@ -19,6 +19,9 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        
+      - name: Add CNAME file
+        run: echo "www.buildingconsensus.ca" > ./dist/CNAME
 
       - name: Build project
         run: npm run build
