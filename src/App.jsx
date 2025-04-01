@@ -1,18 +1,26 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+import { Layout } from './Layout'
+
 import { Home } from './pages/Home'
 import { EstateServices } from './pages/EstateServices'
+
 
 function App() {
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/EstateServices" element={<EstateServices/>}/>
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route element={<Layout/>}>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/EstateServices" element={<EstateServices/>}/>
+          </Route>
+        </Routes>
+      </Router>
+    </>
+    
   )
 }
 
