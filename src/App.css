@@ -1,6 +1,11 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global Styles */
+
+.accent1 {
+  color: #ff6347;
+  /* Tomato */
+}
+
+.accent2 {
+  color: #47E3FF;
+  /* Steel Blue */
 }

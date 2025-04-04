@@ -14,16 +14,10 @@
 
 .description {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   text-align: center;
 }
 
-.accent1 {
-  color: #ff6347;
-  /* Tomato */
-}
-
-.accent2 {
-  color: #4682b4;
-  /* Steel Blue */
+.card-row {
+  justify-content: center;
 }

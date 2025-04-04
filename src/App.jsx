@@ -4,6 +4,7 @@ import { Layout } from './Layout'
 
 import { Home } from './pages/Home'
 import { EstateServices } from './pages/EstateServices'
+import './App.css'
 
 
 function App() {
