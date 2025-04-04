@@ -14,16 +14,19 @@ export function Home() {
             title="Indigenous Election Appeals"
             description="A neutral third party helps disputing parties reach a mutually acceptable agreement."
             imageSrc="https://via.placeholder.com/150"
+            link="/ElectionAppeals"
           />
           <CardComponent
             title="Family Mediation"
             description="A neutral third party makes a binding decision to resolve the dispute."
             imageSrc="https://via.placeholder.com/150"
+            link="/FamilyMediation"
           />
           <CardComponent
             title="Employment Mediation"
             description="Parties communicate directly to reach a mutually acceptable agreement."
             imageSrc="https://via.placeholder.com/150"
+            link="/EmploymentMediation"
           />
         </Row>
     </Container>
