@@ -14,6 +14,9 @@ export function Navigationbar() {
           <Nav className='me-auto'>
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/ElectionAppeals">Indigenous Election Appeals</Nav.Link>
+            <Nav.Link as={Link} to="/FamilyMediation">Family Mediation</Nav.Link>
+            <Nav.Link as={Link} to="/EmploymentMediation">Employment Mediation</Nav.Link>
+            <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
