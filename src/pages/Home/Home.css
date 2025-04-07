@@ -14,8 +14,12 @@
   text-align: center;
 }
 
-.card-row {
+.centered {
   justify-content: center;
+}
+
+.scroll-x {
+  overflow-x: scroll;
 }
 
 .list-group .list-group-item {
