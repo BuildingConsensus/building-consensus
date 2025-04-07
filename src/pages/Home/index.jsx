@@ -5,9 +5,7 @@ import './Home.css'
 export function Home() {
   return (
     <Container className="home-container">
-        <h2 className="tagline">
-          <span className='accent1'>Access</span> to professional dispute resolution
-          <br />has never been <span className='accent1'>so easy.</span> </h2>
+        <h2 className="tagline">Building Consensus</h2>
         <p className="description text-muted">Avoid headaches while saving money and time by letting us mediate instead of the courts.</p>
         <Row className='card-row'>
           <CardComponent
