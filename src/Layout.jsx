@@ -6,10 +6,10 @@ import Container from 'react-bootstrap/Container';
 
 export function Layout() {
   return (
-    <Container>
+    <>
       <Logo />
       <Navigationbar />
       <Outlet />
-    </Container>
+    </>
   );
 }
