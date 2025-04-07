@@ -6,6 +6,21 @@
 }
 
 .accent2 {
-  color: #47E3FF;
-  /* Steel Blue */
+  color: #8a1a22;
+  /* Dark Red */
+}
+
+.bg-light {
+  color: #fbf4f4;
+  /* Ivory */
+}
+
+.bg-brown {
+  color: #3b221c;
+  /* rainbow 💖 */
+}
+
+.bg-dark {
+  color: #1f1f25;
+  /* Dark navy/black */
 }
