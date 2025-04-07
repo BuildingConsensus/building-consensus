@@ -1,4 +1,13 @@
 .card {
-  padding: 1rem;
   margin: 2rem 2rem;
+  border-radius: 1rem;
+  border-color: var(--bg-dark-color);
+  border-width: 0.2rem;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  margin: 0 2rem;
 }
