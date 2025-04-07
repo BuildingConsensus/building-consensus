@@ -5,7 +5,7 @@ import './Logo.css';
 export function Logo() {
   return (
     <>
-      <Image src={sunset} alt="Sunset" className='sunset-image' thumbnail fluid />
+      <Image src={sunset} alt="Sunset" className='sunset-image' fluid />
     </>
   );
 }
