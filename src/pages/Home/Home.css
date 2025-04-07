@@ -18,11 +18,15 @@
   justify-content: center;
 }
 
+.employee-row {
+  background-color: var(--bg-brown-color);
+}
+
 /* If width <= 1100px, apply scrollable */
 @media (max-width: 1100px) {
-    .portraits {
-      overflow-x: scroll;
-    }
+  .portraits {
+    overflow-x: scroll;
+  }
 }
 
 /* By the way 1100 is just the magic number for 3 portraits.
@@ -35,8 +39,4 @@
   .portraits {
     justify-content: center;
   }
-}
-
-.list-group .list-group-item {
-  background-color: var(--bg-brown-color);
 }
