@@ -17,3 +17,7 @@
 .card-row {
   justify-content: center;
 }
+
+.list-group .list-group-item {
+  background-color: var(--bg-brown-color);
+}
