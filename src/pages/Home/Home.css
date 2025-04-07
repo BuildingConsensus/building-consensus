@@ -18,8 +18,23 @@
   justify-content: center;
 }
 
-.scroll-x {
-  overflow-x: scroll;
+/* If width <= 1100px, apply scrollable */
+@media (max-width: 1100px) {
+    .portraits {
+      overflow-x: scroll;
+    }
+}
+
+/* By the way 1100 is just the magic number for 3 portraits.
+ * This solution isn't very elegant because...
+ * if we add/remove portraits or change their size, or otherwise adjust the layout
+ * then we'll have to find a new 'magic number'
+ */
+/* If width >= 1101px, apply centered */
+@media (min-width: 1101px) {
+  .portraits {
+    justify-content: center;
+  }
 }
 
 .list-group .list-group-item {
