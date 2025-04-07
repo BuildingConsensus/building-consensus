@@ -4,9 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 
+import './Navbar.css';
+
 export function Navigationbar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/">Building Consensus</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

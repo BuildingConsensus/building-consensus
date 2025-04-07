@@ -24,3 +24,10 @@
   color: #1f1f25;
   /* Dark navy/black */
 }
+
+/* override bootstrap navbar colors */
+.navbar,
+.navbar-default {
+  background-image: linear-gradient(to bottom, #8a1a22 0, #8a1a22 100%) !important;
+  /* override background image gradient w/ flat color */
+}
