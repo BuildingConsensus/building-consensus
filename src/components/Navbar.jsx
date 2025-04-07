@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 
 export function Navigationbar() {
   return (
-    <Navbar expand="lg" className='mb-3'>
+    <Navbar expand="lg" className='mb-3' variant='dark'>
       <Container>
         <Navbar.Brand as={Link} to="/">Building Consensus</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
