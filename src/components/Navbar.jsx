@@ -7,11 +7,11 @@ import Container from 'react-bootstrap/Container';
 export function Navigationbar() {
   return (
     <Navbar expand="lg" className='mb-3' variant='dark'>
-      <Container>
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">Building Consensus</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className='me-auto'>
+          <Nav className='ms-auto'>
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/ElectionAppeals">Indigenous Election Appeals</Nav.Link>
             <Nav.Link as={Link} to="/FamilyMediation">Family Mediation</Nav.Link>
