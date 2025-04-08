@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom';
 
-export function PathLocationName() {
+export function PathLocationName(wantRawPathname = false) {
   const location = useLocation();
-  return getPageName(location.pathname);
+  return wantRawPathname ? location.pathname : getPageName(location.pathname);
 }
 
 function getPageName(pathname) {
