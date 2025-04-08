@@ -3,12 +3,21 @@ import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import { PathLocationName } from './PathLocationName';
 
 export function Navigationbar() {
+  
   return (
     <Navbar expand="lg" className='mb-3' variant='dark'>
       <Container fluid>
-        <Navbar.Brand as={Link} to="/">Building Consensus</Navbar.Brand>
+        {/* Brand visible only on large devices */}
+        <Navbar.Brand className='d-none d-lg-block' as={Link} to="/">
+          Building Consensus
+        </Navbar.Brand>
+        {/* Current page title visible on small devices */}
+        <Navbar.Brand className='d-lg-none'>
+          {PathLocationName()}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className='ms-auto'>
