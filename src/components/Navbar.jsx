@@ -22,7 +22,7 @@ export function Navigationbar() {
   const isDesktop = useMediaQuery({ query: `(min-width: ${lgBreakpoint})` });
 
   return (
-    <Navbar expanded={expanded} expand="lg" className="mb-3" variant="dark">
+    <Navbar expanded={expanded} expand="lg" variant="dark">
       <Container fluid>
         {/* Brand visible only on large devices */}
         <Navbar.Brand className="d-none d-lg-block" as={Link} to="/">
