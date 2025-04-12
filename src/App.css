@@ -1,26 +1,31 @@
 /* Global Styles */
 
-.accent1 {
-  color: #ff6347;
-  /* Tomato */
-}
-
-.accent2 {
-  color: #8a1a22;
+:root {
+  --primary-color: #8a1a22;
   /* Dark Red */
-}
-
-.bg-light {
-  color: #fbf4f4;
+  --secondary-color: #A71E28;
+  /* Lighter Red */
+  --accent-color: #ff6347;
+  /* Tomato */
+  --bg-light-color: #fbf4f4;
   /* Ivory */
-}
-
-.bg-brown {
-  color: #3b221c;
+  --bg-brown-color: #3b221c;
   /* rainbow 💖 */
+  --bg-dark-color: #1f1f25;
+  /* Dark navy/black */
 }
 
-.bg-dark {
-  color: #1f1f25;
-  /* Dark navy/black */
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
 }
