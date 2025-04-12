@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -8,20 +9,17 @@ import { PathLocationName } from "../utilities/PathLocationName";
 
 export function Navigationbar() {
   const [expanded, setExpanded] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 992);
 
-  // 992 is the bootstrap breakpoint for large devices
-  const updateMedia = () => {
-    setIsDesktop(window.innerWidth > 992);
-  };
-
-  // Easiest way I found to monitor window size changes
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => {
-      window.removeEventListener("resize", updateMedia);
-    };
-  });
+  // This is the solution for getting the Bootstrap breakpoint values in JavaScript
+  const lgBreakpoint = getComputedStyle(document.body).getPropertyValue(
+    "--bs-breakpoint-lg"
+  );
+  /*
+  99% of the time it is unnessary to use useMediaQuery because any css can be rendered responsive using
+  Bootstrap's classNames. However, because of bootstrap-react and having to provide a Variant prop to the Nav
+  in order to underline active links, It was least messy to just use a javascript variable.
+  */
+  const isDesktop = useMediaQuery({ query: `(min-width: ${lgBreakpoint})` });
 
   return (
     <Navbar expanded={expanded} expand="lg" className="mb-3" variant="dark">
