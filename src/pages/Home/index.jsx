@@ -6,7 +6,7 @@ import "./Home.css";
 
 export function Home() {
   return (
-    <Container fluid className="home-container">
+    <Container fluid className="home-container pt-3">
       <h2 className="company-name">Building Consensus</h2>
       <p className="description">
         Mediations, Civil Disputes, <br /> and Elections Appeals

@@ -21,3 +21,7 @@
 .employee-row {
   background-color: var(--bg-brown-color);
 }
+
+.home-container {
+  background-image: url("../../assets/body-background-tile.png");
+}
