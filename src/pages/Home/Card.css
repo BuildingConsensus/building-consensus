@@ -1,0 +1,29 @@
+
+.card {
+  margin: 2rem 2rem;
+  border-radius: 1rem;
+  border-color: var(--bg-dark-color);
+  border-width: 0.2rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  margin: 0 2rem;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.card-button:hover {
+  background-color: var(--bg-dark-color);
+}
+
+.card-button:active,
+.card-button:focus {
+  background-color: var(--accent-color) !important;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
