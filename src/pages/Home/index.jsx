@@ -2,6 +2,7 @@ import { Container, Row } from "react-bootstrap";
 import { CardComponent } from "./Card";
 import { EmployeeCardComponent } from "./EmployeeCard";
 import "./Home.css";
+import { PhotoText } from "../../components/PhotoText";
 
 export function Home() {
   return (
@@ -10,6 +11,7 @@ export function Home() {
       <p className="description">
         Mediations, Civil Disputes, <br /> and Elections Appeals
       </p>
+      <PhotoText />
       <Row className="centered mb-3">
         <CardComponent
           title="Indigenous Election Appeals"
