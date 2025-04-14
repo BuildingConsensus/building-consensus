@@ -1,9 +1,9 @@
 /* Global Styles */
 
 :root {
-  --primary-color: #8a1a22;
+  --primary-color: #A71E28;
   /* Dark Red */
-  --secondary-color: #A71E28;
+  --secondary-color: #8a1a22;
   /* Lighter Red */
   --accent-color: #ff6347;
   /* Tomato */
@@ -16,8 +16,8 @@
 }
 
 .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
 
 .btn-primary:hover {
@@ -25,7 +25,11 @@
   border-color: var(--secondary-color);
 }
 
+.bg-primary {
+  background-color: var(--bg-dark-color) !important;
+}
+
 .navbar {
-  background-color: var(--secondary-color);
-  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
