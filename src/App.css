@@ -29,7 +29,19 @@
   background-color: var(--bg-dark-color) !important;
 }
 
+.bg-secondary {
+  background-color: var(--bg-light-color) !important;
+}
+
+.bg-default {
+  background-color: var(--bg-brown-color) !important;
+}
+
 .navbar {
   background-color: var(--primary-color);
   border-color: var(--secondary-color);
+}
+
+.vh-50 {
+  height: 50vh !important;
 }
