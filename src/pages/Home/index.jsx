@@ -1,7 +1,6 @@
-import { Container, Placeholder, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { CardComponent } from "./Card";
 import { EmployeeCardComponent } from "./EmployeeCard";
-import ListGroup from "react-bootstrap/ListGroup";
 import "./Home.css";
 
 export function Home() {
