@@ -11,7 +11,14 @@ export function Home() {
       <p className="description">
         Mediations, Civil Disputes, <br /> and Elections Appeals
       </p>
-      <PhotoText />
+      <PhotoText
+        title="Our Experience"
+        text="We consist of three lawyers who bring a combined 50 years of legal and ADR resolution  experience. 
+        All three have sat before professional tribunals such as the Indian Residential School tribunal,
+        the Human Rights Commission, Rentals Board, and First Nation tribunals.
+        We all have extensive court and litigation experience paired with a complex understanding of principles of natural justice and court procedures."
+        variant="reverse"
+      />
       <Row className="centered mb-3">
         <CardComponent
           title="Indigenous Election Appeals"

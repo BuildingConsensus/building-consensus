@@ -15,11 +15,9 @@ export function PhotoText({
   variant = "normal",
 }) {
   return (
-    <Row className={`flex-row-${variant}`} fluid>
+    <Row className={`flex-row-${variant} mb-3`}>
       <Col xs={12} md={7} className="p-0">
-        {photoURL && (
-          <Image src={photoURL} alt={altText} className="photo" fluid />
-        )}
+        {photoURL && <Image src={photoURL} alt={altText} className="photo" />}
         {!photoURL && (
           <Container className="d-flex justify-content-center align-items-center bg-default h-100 vh-50">
             <h2 className="text-center text-white">Replace with Image</h2>
@@ -28,14 +26,13 @@ export function PhotoText({
       </Col>
       <Col
         xs={12}
-        md={5}
-        className={`pt-5 px-4 text-background shadow-lg text-${
-          variant === "reverse" ? "end" : "start"
-        }`}
+        md={4}
+        className="pt-5 pe-4 ps-5 mx-auto text-start text-background"
       >
-        <h2 className="title">{title}</h2>
-        <p className="text">{text}</p>
+        <h2 className="title fs-1 fw-bold text-primary">{title}</h2>
+        <p className="text fs-5">{text}</p>
       </Col>
+      <Col xs={0} md={1} className="text-background"></Col>
     </Row>
   );
 }
