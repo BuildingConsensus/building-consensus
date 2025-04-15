@@ -2,6 +2,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import "./PhotoText.css";
 
+/*
+variant: "normal" | "reverse"
+  - normal: image on the left, text on the right
+  - reverse: image on the right, text on the left
+*/
 export function PhotoText({
   photoURL,
   altText = "No alt text provided",
@@ -10,7 +15,7 @@ export function PhotoText({
   variant = "normal",
 }) {
   return (
-    <Row className={`photo-text-${variant}`} fluid>
+    <Row className={`flex-row-${variant}`} fluid>
       <Col xs={12} md={7} className="p-0">
         {photoURL && (
           <Image src={photoURL} alt={altText} className="photo" fluid />
@@ -21,7 +26,13 @@ export function PhotoText({
           </Container>
         )}
       </Col>
-      <Col xs={12} md={5} className="pt-5 px-4 text-background shadow-lg">
+      <Col
+        xs={12}
+        md={5}
+        className={`pt-5 px-4 text-background shadow-lg text-${
+          variant === "reverse" ? "end" : "start"
+        }`}
+      >
         <h2 className="title">{title}</h2>
         <p className="text">{text}</p>
       </Col>
