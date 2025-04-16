@@ -16,6 +16,10 @@
   /* Dark navy/black */
 }
 
+.bg-bar {
+  background-color: var(--secondary-color) !important;
+}
+
 .text-background {
   background-color: rgba(var(--bg-light-color-rgb), 0.5) !important;
 }

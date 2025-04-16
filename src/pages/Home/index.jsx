@@ -1,8 +1,10 @@
 import { Container, Row } from "react-bootstrap";
 import { CardComponent } from "./Card";
 import { EmployeeCardComponent } from "./EmployeeCard";
-import "./Home.css";
 import { PhotoText } from "../../components/PhotoText";
+import { Textbox } from "../../components/Textbox";
+
+import "./Home.css";
 
 export function Home() {
   return (
@@ -11,13 +13,23 @@ export function Home() {
       <p className="description">
         Mediations, Civil Disputes, <br /> and Elections Appeals
       </p>
+      <Textbox
+        title="What is Mediation?"
+        text="Mediation is a form of assisted negotiation 
+          where a neutral third party, the mediator, 
+          helps  disputing parties find a mutually agreeable resolution to their conflict. 
+          It's a structured process that allows parties to express their perspectives, explore solutions, 
+          and potentially reach a settlement that addresses  their needs."
+        variant="normal"
+      ></Textbox>
       <PhotoText
         title="Our Experience"
         text="We consist of three lawyers who bring a combined 50 years of legal and ADR resolution  experience. 
-        All three have sat before professional tribunals such as the Indian Residential School tribunal,
-        the Human Rights Commission, Rentals Board, and First Nation tribunals.
-        We all have extensive court and litigation experience paired with a complex understanding of principles of natural justice and court procedures."
-        variant=""
+          All three have sat before professional tribunals such as the Indian Residential School tribunal,
+          the Human Rights Commission, Rentals Board, and First Nation tribunals.
+          We all have extensive court and litigation experience paired with a complex understanding of principles 
+          of natural justice and court procedures."
+        variant="normal"
       />
       <Row className="centered mb-3">
         <CardComponent
