@@ -12,7 +12,9 @@ export function Textbox({
     >
       <h2 className="title fs-1 fw-bold text-center text-primary">{title}</h2>
       <p className="text fs-5">{text}</p>
-      <Container className="p-1 w-75 bg-bar mt-auto"></Container>
+      {variant != "nobar" && (
+        <Container className="p-1 w-75 bg-bar mt-auto"></Container>
+      )}
     </Col>
   );
 }
