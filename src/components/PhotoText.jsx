@@ -16,7 +16,7 @@ export function PhotoText({
 }) {
   return (
     <Row className={`flex-row-${variant} mb-3`}>
-      <Col xs={12} md={7} className="p-0 mb-3">
+      <Col xs={12} lg={7} className="p-0 mb-3">
         {photoURL && <Image src={photoURL} alt={altText} className="photo" />}
         {!photoURL && (
           <Container className="d-flex justify-content-center align-items-center bg-default h-100 vh-50">
@@ -24,13 +24,13 @@ export function PhotoText({
           </Container>
         )}
       </Col>
-      <Col className="text-background shadow-lg">
+      <Col className="text-background shadow-lg" xs={12} lg={5}>
         <Row className={`flex-row-${variant} mb-3`}>
-          <Col xs={12} md={10} className="pt-5 pe-5 ps-4 text-start">
+          <Col xs={12} lg={11} xl={10} className="pt-5 ps-4 text-start">
             <h2 className="title fs-1 fw-bold text-primary">{title}</h2>
             <p className="text fs-5">{text}</p>
           </Col>
-          <Col xs={0} md={2}></Col>
+          <Col xs={0} lg={1} xl={2}></Col>
         </Row>
       </Col>
     </Row>
