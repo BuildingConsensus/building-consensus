@@ -8,11 +8,13 @@ import "./Home.css";
 
 export function Home() {
   return (
-    <Container fluid className="home-container pt-3 d-grid">
-      <h2 className="company-name">Building Consensus</h2>
-      <p className="description">
-        Mediations, Civil Disputes, <br /> and Elections Appeals
-      </p>
+    <Container fluid className="home-container pt-3 d-grid gap-5">
+      <Container>
+        <h2 className="company-name">Building Consensus</h2>
+        <p className="description">
+          Mediations, Civil Disputes, <br /> and Elections Appeals
+        </p>
+      </Container>
       <Row className="centered justify-content-around my-5">
         <Textbox
           title="What is Mediation?"
@@ -41,7 +43,7 @@ export function Home() {
           of natural justice and court procedures."
         variant="normal"
       />
-      <Row className="centered">
+      <Row className="centered mt-5">
         <Textbox
           title={
             <>
@@ -55,7 +57,7 @@ export function Home() {
         ></Textbox>
       </Row>
 
-      <Row className="centered mb-3">
+      <Row className="centered mb-5">
         <CardComponent
           title="Indigenous Election Appeals"
           description="Resolve band and council elections appeals in 6 months or less."
@@ -72,7 +74,7 @@ export function Home() {
           link="/EmploymentMediation"
         />
       </Row>
-      <Row className="flex-nowrap overflow-auto employee-row">
+      <Row className="flex-nowrap overflow-auto employee-row mt-5">
         <EmployeeCardComponent
           name="Marilyn Adsit"
           phone="(780) 123-4567"
