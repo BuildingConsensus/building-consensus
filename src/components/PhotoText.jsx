@@ -24,7 +24,7 @@ export function PhotoText({
           </Container>
         )}
       </Col>
-      <Col className="text-background shadow-lg" xs={12} lg={5}>
+      <Col className="shadow-lg text-background" xs={12} lg={5}>
         <Row className={`flex-row-${variant} mb-3`}>
           <Col xs={12} lg={11} xl={10} className="pt-5 ps-4 text-start">
             <h2 className="title fs-1 fw-bold text-primary">{title}</h2>

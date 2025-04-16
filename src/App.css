@@ -7,12 +7,17 @@
   /* Lighter Red */
   --accent-color: #ff6347;
   /* Tomato */
+  --bg-light-color-rgb: 251, 244, 244;
   --bg-light-color: #fbf4f4;
   /* Ivory */
   --bg-brown-color: #3b221c;
   /* rainbow 💖 */
   --bg-dark-color: #1f1f25;
   /* Dark navy/black */
+}
+
+.text-background {
+  background-color: rgba(var(--bg-light-color-rgb), 0.5) !important;
 }
 
 .btn-primary {

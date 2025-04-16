@@ -1,9 +1,0 @@
-/* 
-I literally have no idea why I have to hardcode this.
-It pissed me off so bad and I spent like 30 minutes just trying to get
-this stupid color to show up. This is the same color as --bg-light-color
-but for some reason if I use the variable it doesn't work.
-*/
-.text-background {
-  background-color: rgba(251, 244, 244, 0.5) !important;
-}
