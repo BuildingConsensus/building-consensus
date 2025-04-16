@@ -17,7 +17,7 @@ export function Home() {
         All three have sat before professional tribunals such as the Indian Residential School tribunal,
         the Human Rights Commission, Rentals Board, and First Nation tribunals.
         We all have extensive court and litigation experience paired with a complex understanding of principles of natural justice and court procedures."
-        variant="reverse"
+        variant=""
       />
       <Row className="centered mb-3">
         <CardComponent
