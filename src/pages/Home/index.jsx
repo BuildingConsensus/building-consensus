@@ -12,7 +12,7 @@ export function Home() {
       <Container>
         <h2 className="company-name">Building Consensus</h2>
         <p className="description">
-          Mediations, Civil Disputes, <br /> and Elections Appeals
+          Mediations, Civil Disputes, and Elections Appeals
         </p>
       </Container>
       <Row className="centered justify-content-around my-5">
