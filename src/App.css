@@ -49,6 +49,9 @@
 .text-primary {
   color: var(--primary-color) !important;
 }
+.text-black {
+  color: var(--bg-dark-color) !important;
+}
 
 .navbar {
   background-color: var(--primary-color);
