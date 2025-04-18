@@ -2,7 +2,6 @@
 import { Navigationbar } from "./components/Navbar";
 import { Logo } from "./components/Logo";
 import { Outlet } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
 
 export function Layout() {
   return (
