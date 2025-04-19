@@ -3,12 +3,15 @@ import { CardComponent } from "./Card";
 import { EmployeeCardComponent } from "./EmployeeCard";
 import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
+import { Carousel } from "react-bootstrap";
+
+import Flowers from "../../assets/Flowers.jpg";
 
 import "./Home.css";
 
 export function Home() {
   return (
-    <Container fluid className="home-container pt-3 d-grid gap-5">
+    <Container fluid className="home-container pt-3 p-0 d-grid gap-5">
       <Container>
         <h2 className="company-name">Building Consensus</h2>
         <p className="description">
@@ -35,6 +38,7 @@ export function Home() {
         ></Textbox>
       </Row>
       <PhotoText
+        photoURL={Flowers}
         title="Our Experience"
         text="We consist of three lawyers who bring a combined 50 years of legal and ADR resolution  experience. 
           All three have sat before professional tribunals such as the Indian Residential School tribunal,
@@ -74,6 +78,31 @@ export function Home() {
           link="/EmploymentMediation"
         />
       </Row>
+
+      <Container className="px-0 py-5 bg-default" fluid>
+        <Container className="text-background p-0 shadow-lg">
+          <h2 className="section-heading mb-0 p-0 dark-mask">Our Team</h2>
+        </Container>
+        <Carousel interval={null}>
+          <Carousel.Item>
+            <Container>
+              <PhotoText
+                photoURL={
+                  "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                }
+                title="Marilyn"
+                points={["10+ years of experience in family law", "...", "..."]}
+                variant="portrait"
+              ></PhotoText>
+            </Container>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Container>
+              <PhotoText></PhotoText>
+            </Container>
+          </Carousel.Item>
+        </Carousel>
+      </Container>
       <Row className="flex-nowrap overflow-auto employee-row mt-5">
         <EmployeeCardComponent
           name="Marilyn Adsit"
