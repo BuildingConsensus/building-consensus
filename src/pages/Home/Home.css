@@ -25,3 +25,9 @@
 .home-container {
   background-image: url("../../assets/body-background-tile.png");
 }
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
