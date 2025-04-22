@@ -5,20 +5,20 @@ import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
 import { Carousel } from "react-bootstrap";
 
-import Flowers from "../../assets/Flowers.jpg";
+import Flowers from "../../assets/flowers-cropped.jpg";
 
 import "./Home.css";
 
 export function Home() {
   return (
-    <Container fluid className="home-container pt-3 p-0 d-grid gap-5">
+    <Container fluid className="home-container pt-3 p-0 h-100">
       <Container>
         <h2 className="company-name">Building Consensus</h2>
         <p className="description">
           Mediations, Civil Disputes, and Elections Appeals
         </p>
       </Container>
-      <Row className="centered justify-content-around my-5">
+      <Row className="centered justify-content-around my-5 h-100">
         <Textbox
           title="What is Mediation?"
           text="Mediation is a form of assisted negotiation 
@@ -47,7 +47,7 @@ export function Home() {
           of natural justice and court procedures."
         variant="normal"
       />
-      <Row className="centered mt-5">
+      <Row className="justify-content-center mt-5">
         <Textbox
           title={
             <>
