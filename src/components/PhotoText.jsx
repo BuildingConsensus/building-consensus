@@ -1,5 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
+import "./PhotoText.css";
+import { useState, useEffect, useRef } from "react";
 
 /*
 variant: "normal" | "reverse"
@@ -17,14 +19,26 @@ export function PhotoText({
   variant = "normal",
 }) {
   // Setting the column size based on the variant || 3 for portrait and 7 for landscape
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
+  useEffect(() => {
+    setHeight(ref.current.clientHeight);
+  });
   const imgColSize = variant === "portrait" ? 3 : 7;
   const bulletPoints = points.map((point) => <li>{point}</li>);
 
   return (
-    <Row className={`flex-row-${variant} mb-3 centered`}>
-      <Col xs={12} lg={imgColSize} className="p-0 h-50">
+    <Row className={`flex-row-${variant} mb-3 justify-content-center h-100`}>
+      <Col
+        xs={variant == "portrait" ? imgColSize : 12}
+        lg={imgColSize}
+        className="p-0 h-100"
+      >
         {photoURL && (
-          <Image src={photoURL} alt={altText} className="photo w-100" />
+          <Container
+            className="photo"
+            style={{ backgroundImage: `url(${photoURL})`, height: height }}
+          />
         )}
         {!photoURL && (
           <Container className="d-flex justify-content-center align-items-center bg-default vh-50">
@@ -33,8 +47,9 @@ export function PhotoText({
         )}
       </Col>
       <Col
+        ref={ref}
         className="shadow-lg text-background"
-        xs={12}
+        xs={variant == "portrait" ? 12 - imgColSize : 12}
         sm={8}
         lg={12 - imgColSize}
       >
