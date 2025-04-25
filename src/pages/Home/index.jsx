@@ -3,12 +3,32 @@ import { CardComponent } from "./Card";
 import { EmployeeCardComponent } from "./EmployeeCard";
 import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
+import Image from "react-bootstrap/Image";
+import topImg from "../../assets/skyline-cropped.jpg";
 
 import "./Home.css";
 
 export function Home() {
   return (
-    <Container fluid className="home-container pt-3 d-grid gap-5">
+    <Container fluid className="home-container d-grid gap-5">
+      <Container className="justify-content-center d-flex border border-dark p-0 border-2 position-relative bg-secondary">
+        <Image src={topImg} className="bg-image" fluid></Image>
+        <Container className="img-text">
+          <h2 className="header-text text-start border-bottom border-dark border-4 mx-5">
+            Our Vision
+          </h2>
+          <p className="text-center fs-2 mb-5">
+            We aim to provide independent impartial and substantial consultation
+          </p>
+          <p className="text-center fs-2 mb-5">
+            Our mission is to resolve disputes by consensus building in
+            communities
+          </p>
+          <p className="text-center fs-2">
+            Restoring relationships and keeping the peace
+          </p>
+        </Container>
+      </Container>
       <Container>
         <h2 className="company-name">Building Consensus</h2>
         <p className="description">
