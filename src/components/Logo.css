@@ -1,3 +1,9 @@
 .sunrise-image {
   margin: 10px 0;
+  width: auto;
+}
+
+.bg-con {
+  background: var(--bg-light-color) !important;
+  background: linear-gradient(90deg, rgba(var(--bg-light-color-rgb), 1) 0%, rgba(222, 165, 39, 0.4) 50%, rgba(var(--bg-light-color-rgb), 1) 100%) !important;
 }
