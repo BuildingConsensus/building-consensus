@@ -34,12 +34,8 @@
   opacity: 0.4;
 }
 
-.header-text {
-  font-size: 4rem;
-}
-
 .img-text {
   position: absolute;
-  top: 20%;
+  top: 0;
   left: 0;
 }
