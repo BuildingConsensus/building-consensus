@@ -41,18 +41,14 @@ export function PhotoText({
       <Col
         xs={variant == "portrait" ? imgColSize : 12}
         lg={imgColSize}
-        className="p-0 h-100"
+        className="p-0 photo align-items-center"
+        style={{
+          height: height,
+          backgroundImage: `${photoURL ? `url(${photoURL})` : ""}`,
+        }}
       >
-        {photoURL && (
-          <Container
-            className="photo"
-            style={{ backgroundImage: `url(${photoURL})`, height: height }}
-          />
-        )}
         {!photoURL && (
-          <Container className="d-flex justify-content-center align-items-center bg-default vh-50">
-            <h2 className="text-center text-white">Replace with Image</h2>
-          </Container>
+          <h2 className="text-center text-white ">Replace with Image</h2>
         )}
       </Col>
       <Col
