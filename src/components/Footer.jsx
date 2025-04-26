@@ -1,22 +1,8 @@
-// import { useMediaQuery } from "react-responsive";
-import { Stack, Container, Col, Row } from "react-bootstrap";
+import { Stack, Container, Col, Row, Image } from "react-bootstrap";
+import Facebook from "../assets/Facebook.png";
 import "../App.css"
 
-/*
-210 - 335 Packham Ave.
-Saskatoon, Saskatchewan S7N 4S1.
-PHONE: 306-373-8511.
-FAX: 306-373-8510
-*/
-
 export function Footer() {
-  /* Not sure if will be used later
-  const lgBreakpoint = getComputedStyle(document.body).getPropertyValue(
-    "--bs-breakpoint-lg"
-  );
-  const isDesktop = useMediaQuery({ query: `(min-width: ${lgBreakpoint})` });
-  */
-
   return (
     <Container fluid className="bg-primary">
       <Row className="mx-5 pt-2">
@@ -57,6 +43,9 @@ export function Footer() {
               adsit@outlook.ca
             </p>
           </Stack>
+          <a href="https://www.facebook.com">
+            <Image src={Facebook} width="50px" height="50px"/>
+          </a>
         </Col>
       </Row>
     </Container>
