@@ -8,7 +8,7 @@ export function Footer() {
       <Row className="mx-5 pt-2">
         <Col>
           <h5 className="text-white"> OFFICE LOCATIONS </h5>
-          <Stack className="mx-5 pt-2" direction="horizontal" gap={0}>
+          <Stack direction="horizontal" gap={0}>
             <p className="text-white px-2"> Saskatoon Office: <br /> <br /> <br /> <br /> </p>
             <p className="text-white">
               210 - 335 Packham Ave. <br />
@@ -17,7 +17,7 @@ export function Footer() {
               FAX: 306-373-8510
             </p>
           </Stack>
-          <Stack className="mx-5 pt-2" direction="horizontal" gap={0}>
+          <Stack direction="horizontal" gap={0}>
             <p className="text-white px-2"> Edmonton Office: <br /> <br /> <br /> <br /> </p>
             <p className="text-white">
               85902 - 335 Packham Ave. <br />
@@ -29,22 +29,23 @@ export function Footer() {
         </Col>
         <Col>
           <h5 className="text-white"> CONTACT US </h5>
-          <Stack className="mx-5 pt-2" direction="horizontal" gap={0}>
+          <Stack direction="horizontal" gap={0}>
             <p className="text-white px-2"> Marilyn P. Adsit:<br /> <br /></p>
             <p className="text-white">
               780-123-4567 <br />
               adsit@outlook.ca
             </p>
           </Stack>
-          <Stack className="mx-5 pt-2" direction="horizontal" gap={0}>
+          <Stack direction="horizontal" gap={0}>
             <p className="text-white px-2"> Partner 2:<br /> <br /></p>
             <p className="text-white">
               780-123-4567 <br />
               adsit@outlook.ca
             </p>
           </Stack>
+          {/* TODO: link to facebook page once created.*/}
           <a href="https://www.facebook.com">
-            <Image src={Facebook} width="50px" height="50px"/>
+            <Image src={Facebook} width="50px" height="50px" />
           </a>
         </Col>
       </Row>
