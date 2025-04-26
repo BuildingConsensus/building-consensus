@@ -5,7 +5,7 @@ import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
 import { Carousel } from "react-bootstrap";
 
-import Flowers from "../../assets/flowers-cropped.jpg";
+import Flowers from "../../assets/Flowers.jpg";
 
 import "./Home.css";
 
@@ -79,13 +79,16 @@ export function Home() {
         />
       </Row>
 
-      <Container className="px-0 py-5 bg-default" fluid>
-        <Container className="text-background p-0 shadow-lg">
+      <Container
+        className="d-flex align-items-center flex-column px-0 py-5 bg-default "
+        fluid
+      >
+        <Container className="text-background p-0 shadow-lg ">
           <h2 className="section-heading mb-0 p-0 dark-mask">Our Team</h2>
         </Container>
-        <Carousel interval={null}>
+        <Carousel className="w-100" interval={null}>
           <Carousel.Item>
-            <Container>
+            <Container className="d-flex p-0 justify-content-center">
               <PhotoText
                 photoURL={
                   "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"

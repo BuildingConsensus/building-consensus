@@ -1,7 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Image from "react-bootstrap/Image";
 import "./PhotoText.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useLayoutEffect, useRef } from "react";
 
 /*
 variant: "normal" | "reverse"
@@ -10,7 +9,6 @@ variant: "normal" | "reverse"
 */
 export function PhotoText({
   photoURL,
-  altText = "No alt text provided",
   title = "Default Title",
   text = "Default text",
   phone = "780-123-4567",
@@ -20,15 +18,26 @@ export function PhotoText({
 }) {
   // Setting the column size based on the variant || 3 for portrait and 7 for landscape
   const [height, setHeight] = useState(0);
-  const ref = useRef(null);
-  useEffect(() => {
-    setHeight(ref.current.clientHeight);
-  });
+  const refContainer = useRef();
+  useLayoutEffect(() => {
+    function updateHeight() {
+      setHeight(refContainer.current.offsetHeight);
+    }
+    window.addEventListener("resize", updateHeight);
+    updateHeight();
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
   const imgColSize = variant === "portrait" ? 3 : 7;
   const bulletPoints = points.map((point) => <li>{point}</li>);
 
   return (
-    <Row className={`flex-row-${variant} mb-3 justify-content-center h-100`}>
+    // Do not ask me why only if its in portrait mode it needs to have w-100, If it has it in landscape mode it uncenters the entire thing
+    // but in portrait mode without w-100 it squishes the entire thing into the center. I literally have no idea why.
+    <Row
+      className={`flex-row-${variant} mb-3 justify-content-center align-content-center ${
+        variant == "portrait" ? "w-100" : ""
+      }`}
+    >
       <Col
         xs={variant == "portrait" ? imgColSize : 12}
         lg={imgColSize}
@@ -47,10 +56,10 @@ export function PhotoText({
         )}
       </Col>
       <Col
-        ref={ref}
-        className="shadow-lg text-background"
+        ref={refContainer}
+        className="shadow-lg text-background text-col"
         xs={variant == "portrait" ? 12 - imgColSize : 12}
-        sm={8}
+        sm={9}
         lg={12 - imgColSize}
       >
         <Row
@@ -67,8 +76,8 @@ export function PhotoText({
             } ps-4 text-start `}
           >
             <h2
-              className={`title fs-1 fw-bold text-primary ${
-                variant === "portrait" ? "ps-4 mb-0" : ""
+              className={`title fs-1 fw-bold ${
+                variant === "portrait" ? "ps-4 mb-0" : "text-primary"
               }`}
             >
               {title}

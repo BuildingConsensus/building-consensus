@@ -4,3 +4,7 @@
   background-repeat: no-repeat !important;
   padding-bottom: var(--col-height);
 }
+
+.text-col {
+  height: fit-content;
+}
