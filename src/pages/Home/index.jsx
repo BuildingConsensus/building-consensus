@@ -106,32 +106,6 @@ export function Home() {
           </Carousel.Item>
         </Carousel>
       </Container>
-      <Row className="flex-nowrap overflow-auto employee-row mt-5">
-        <EmployeeCardComponent
-          name="Marilyn Adsit"
-          phone="(780) 123-4567"
-          email="adsit@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-        <EmployeeCardComponent
-          name="James H."
-          phone="(780) 123-4567"
-          email="james@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-        <EmployeeCardComponent
-          name="Boris Nedev"
-          phone="(780) 123-4567"
-          email="boris@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-      </Row>
     </Container>
   );
 }
