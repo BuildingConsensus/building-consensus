@@ -9,8 +9,8 @@ export function Footer() {
         <Col>
           <h5 className="text-white"> OFFICE LOCATIONS </h5>
           <Row>
-            <Col md="auto">
-              <p className="text-white px-2"> Saskatoon Office:</p>
+            <Col md={2}>
+              <p className="text-white"> Saskatoon Office:</p>
             </Col>
             <Col>
               <p className="text-white">
@@ -22,8 +22,8 @@ export function Footer() {
             </Col>
           </Row>
           <Row>
-            <Col md="auto">
-              <p className="text-white px-2"> Edmonton Office:</p>
+            <Col md={2}>
+              <p className="text-white"> Edmonton Office:</p>
             </Col>
             <Col>
               <p className="text-white">
@@ -38,8 +38,8 @@ export function Footer() {
         <Col>
           <h5 className="text-white"> CONTACT US </h5>
           <Row>
-            <Col md="auto">
-              <p className="text-white px-2"> Marilyn P. Adsit:</p>
+            <Col md={2}>
+              <p className="text-white"> Marilyn P. Adsit:</p>
             </Col>
             <Col>
               <p className="text-white">
@@ -49,8 +49,8 @@ export function Footer() {
             </Col>
           </Row>
           <Row>
-            <Col md="auto">
-              <p className="text-white px-2"> Parter 2:</p>
+            <Col md={2}>
+              <p className="text-white"> Partner 2:</p>
             </Col>
             <Col>
               <p className="text-white">
