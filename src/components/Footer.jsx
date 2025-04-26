@@ -9,7 +9,7 @@ export function Footer() {
         <Col>
           <h5 className="text-white"> OFFICE LOCATIONS </h5>
           <Row>
-            <Col md={2}>
+            <Col md={3}>
               <p className="text-white"> Saskatoon Office:</p>
             </Col>
             <Col>
@@ -21,8 +21,8 @@ export function Footer() {
               </p>
             </Col>
           </Row>
-          <Row>
-            <Col md={2}>
+          <Row className="mt-2">
+            <Col md={3}>
               <p className="text-white"> Edmonton Office:</p>
             </Col>
             <Col>
@@ -48,7 +48,7 @@ export function Footer() {
               </p>
             </Col>
           </Row>
-          <Row>
+          <Row className="mt-2">
             <Col md={2}>
               <p className="text-white"> Partner 2:</p>
             </Col>
