@@ -25,3 +25,17 @@
 .home-container {
   background-image: url("../../assets/body-background-tile.png");
 }
+
+.bg-image {
+  background-image: url("../../assets/skyline-cropped.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: blur(4px);
+  opacity: 0.4;
+}
+
+.img-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -3,12 +3,32 @@ import { CardComponent } from "./Card";
 import { EmployeeCardComponent } from "./EmployeeCard";
 import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
+import Image from "react-bootstrap/Image";
+import topImg from "../../assets/skyline-cropped.jpg";
 
 import "./Home.css";
 
 export function Home() {
   return (
-    <Container fluid className="home-container pt-3 d-grid gap-5">
+    <Container fluid className="home-container d-grid gap-5 p-0">
+      <Container className="justify-content-center d-flex border border-dark p-0 border-2 position-relative bg-secondary d-none d-md-flex">
+        <Image src={topImg} className="bg-image" fluid></Image>
+        <Container className="d-flex img-text flex-column">
+          <h2 className="display-1 text-start border-bottom border-dark border-4 pt-xl-5 mx-5 mt-xxl-5 my-lg-4 mb-md-2 mb-sm-1">
+            Our Vision
+          </h2>
+          <p className="text-center lead fs-2 my-xl-5 my-lg-4 mb-md-2 mb-sm-1">
+            We aim to provide independent impartial and substantial consultation
+          </p>
+          <p className="text-center lead fs-2 mb-xl-5 mb-lg-4 mb-md-2 mb-sm-1">
+            Our mission is to resolve disputes by consensus building in
+            communities
+          </p>
+          <p className="text-center lead fs-2">
+            Restoring relationships and keeping the peace
+          </p>
+        </Container>
+      </Container>
       <Row className="centered justify-content-around my-5">
         <Textbox
           title="What is Mediation?"
