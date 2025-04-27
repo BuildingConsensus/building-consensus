@@ -29,12 +29,6 @@ export function Home() {
           </p>
         </Container>
       </Container>
-      <Container>
-        <h2 className="company-name">Building Consensus</h2>
-        <p className="description">
-          Mediations, Civil Disputes, and Elections Appeals
-        </p>
-      </Container>
       <Row className="centered justify-content-around my-5">
         <Textbox
           title="What is Mediation?"
