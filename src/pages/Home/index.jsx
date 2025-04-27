@@ -9,12 +9,6 @@ import "./Home.css";
 export function Home() {
   return (
     <Container fluid className="home-container pt-3 d-grid gap-5">
-      <Container>
-        <h2 className="company-name">Building Consensus</h2>
-        <p className="description">
-          Mediations, Civil Disputes, and Elections Appeals
-        </p>
-      </Container>
       <Row className="centered justify-content-around my-5">
         <Textbox
           title="What is Mediation?"
