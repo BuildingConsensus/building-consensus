@@ -9,7 +9,7 @@ import "./Home.css";
 
 export function Home() {
   return (
-    <Container fluid className="home-container d-grid gap-5 p-0">
+    <Container fluid className="home-container d-grid gap-2 p-0">
       {/* Our Vision Container */ }
       <Container fluid="xl" className="justify-content-center d-flex border border-dark p-0 border-2 position-relative bg-secondary d-none d-md-flex">
         <Image src={topImg} className="bg-image" fluid></Image>
