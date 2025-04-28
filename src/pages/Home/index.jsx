@@ -39,12 +39,8 @@ export function Home() {
       </Row>
 
       {/* 4 Cards */ }
-      <Row>
-        {/* style={{justifyContent: 'right'}}
-              className="justify-content-end"
-              className="justify-content-evenly"
-        */}
-        <Col className="justify-content-end">
+      <Col>
+        <Row className="justify-content-evenly">
           <CardComponent
             title="Election Appeals"
             description="Resolve band and council elections appeals in 6 months or less."
@@ -55,8 +51,8 @@ export function Home() {
             description="Resolve workplace disputes and grievances."
             link="/EmploymentMediation"
           />
-        </Col>
-        <Col>
+        </Row>
+        <Row className="justify-content-evenly">
           <CardComponent
             title="Family Mediation"
             description="Family law and court ordered mediations."
@@ -67,8 +63,8 @@ export function Home() {
             description="Content"
             link="/FamilyMediation"
           />
-        </Col>
-      </Row>
+        </Row>
+      </Col>
       <Row className="flex-nowrap overflow-auto employee-row mt-5">
         <EmployeeCardComponent
           name="Marilyn Adsit"
