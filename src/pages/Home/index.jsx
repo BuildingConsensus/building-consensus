@@ -8,6 +8,7 @@ import { Carousel } from "react-bootstrap";
 import Flowers from "../../assets/Flowers.jpg";
 
 import "./Home.css";
+import { EmployeePortrait } from "./EmployeePortrait";
 
 export function Home() {
   return (
@@ -89,14 +90,12 @@ export function Home() {
         <Carousel className="w-100" interval={null}>
           <Carousel.Item>
             <Container className="d-flex p-0 justify-content-center">
-              <PhotoText
+              <EmployeePortrait
                 photoURL={
                   "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 }
-                title="Marilyn"
                 points={["10+ years of experience in family law", "...", "..."]}
-                variant="portrait"
-              ></PhotoText>
+              />
             </Container>
           </Carousel.Item>
           <Carousel.Item>
