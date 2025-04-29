@@ -1,5 +1,7 @@
 
 .card {
+  width: 20rem;
+  height: 25rem;
   margin: 2rem 2rem;
   border-radius: 1rem;
   border-color: var(--bg-dark-color);

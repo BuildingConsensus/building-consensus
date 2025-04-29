@@ -5,7 +5,7 @@ import "./Card.css";
 
 export function CardComponent({ title, description, link }) {
   return (
-    <Card style={{ width: "20rem", height: "25rem" }} className="card">
+    <Card className="card">
       <Card.Body>
         <Card.Title className="mb-3 text-center">{title}</Card.Title>
         <Card.Text className="text-muted">{description}</Card.Text>
