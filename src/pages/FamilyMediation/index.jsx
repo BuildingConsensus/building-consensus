@@ -1,3 +1,4 @@
+import Flowers from "../../assets/Flowers.jpg"
 import { Container, Row } from "react-bootstrap";
 import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
@@ -6,6 +7,7 @@ export function FamilyMediation() {
   return (
     <Container fluid className="home-container d-grid gap-5 p-0 pt-4">
       <PhotoText
+        photoURL={Flowers}
         title="Our Experience"
         text="We consist of three lawyers who bring a combined 50 years of legal and ADR resolution  experience. 
           All three have sat before professional tribunals such as the Indian Residential School tribunal,

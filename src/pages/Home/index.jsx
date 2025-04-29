@@ -1,16 +1,14 @@
-import { Container, Row, Col } from "react-bootstrap";
-import { CardComponent } from "./Card";
-import { Textbox } from "../../components/Textbox";
-import { Carousel } from "react-bootstrap";
-import Image from "react-bootstrap/Image";
-import topImg from "../../assets/skyline-cropped.jpg";
 import "./Home.css";
+import topImg from "../../assets/skyline-cropped.jpg";
+import { Container, Row, Col, Carousel, Image } from "react-bootstrap";
 import { EmployeePortrait } from "./EmployeePortrait";
+import { Textbox } from "../../components/Textbox";
+import { CardComponent } from "./Card";
 
 export function Home() {
   return (
     <Container fluid className="home-container d-grid gap-2 p-0">
-      {/* Our Vision Container */ }
+      {/* Our Vision Container */}
       <Container fluid="xl" className="justify-content-center d-flex border border-dark p-0 border-2 position-relative bg-secondary d-none d-md-flex">
         <Image src={topImg} className="bg-image" fluid></Image>
         <Container fluid className="d-flex img-text flex-column">
@@ -38,7 +36,7 @@ export function Home() {
         ></Textbox>
       </Row>
 
-      {/* 4 Cards */ }
+      {/* 4 Cards */}
       <Col>
         <Row className="justify-content-evenly">
           <CardComponent
