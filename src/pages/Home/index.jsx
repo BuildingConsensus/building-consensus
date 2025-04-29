@@ -3,10 +3,15 @@ import { CardComponent } from "./Card";
 import { EmployeeCardComponent } from "./EmployeeCard";
 import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
+import { Carousel } from "react-bootstrap";
+
+import Flowers from "../../assets/Flowers.jpg";
 import Image from "react-bootstrap/Image";
 import topImg from "../../assets/skyline-cropped.jpg";
 
+
 import "./Home.css";
+import { EmployeePortrait } from "./EmployeePortrait";
 
 export function Home() {
   return (
@@ -29,7 +34,7 @@ export function Home() {
           </p>
         </Container>
       </Container>
-      <Row className="centered justify-content-around my-5">
+      <Row className="centered justify-content-around my-5 h-100">
         <Textbox
           title="What is Mediation?"
           text="Mediation is a form of assisted negotiation 
@@ -49,6 +54,7 @@ export function Home() {
         ></Textbox>
       </Row>
       <PhotoText
+        photoURL={Flowers}
         title="Our Experience"
         text="We consist of three lawyers who bring a combined 50 years of legal and ADR resolution  experience. 
           All three have sat before professional tribunals such as the Indian Residential School tribunal,
@@ -57,7 +63,7 @@ export function Home() {
           of natural justice and court procedures."
         variant="normal"
       />
-      <Row className="centered mt-5">
+      <Row className="justify-content-center mt-5">
         <Textbox
           title={
             <>
@@ -88,32 +94,32 @@ export function Home() {
           link="/EmploymentMediation"
         />
       </Row>
-      <Row className="flex-nowrap overflow-auto employee-row mt-5">
-        <EmployeeCardComponent
-          name="Marilyn Adsit"
-          phone="(780) 123-4567"
-          email="adsit@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-        <EmployeeCardComponent
-          name="James H."
-          phone="(780) 123-4567"
-          email="james@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-        <EmployeeCardComponent
-          name="Boris Nedev"
-          phone="(780) 123-4567"
-          email="boris@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-      </Row>
+
+      <Container
+        className="d-flex align-items-center flex-column px-0 py-5 bg-default "
+        fluid
+      >
+        <Container className="text-background p-0 shadow-lg ">
+          <h2 className="section-heading mb-0 p-0 dark-mask">Our Team</h2>
+        </Container>
+        <Carousel className="w-100" interval={null}>
+          <Carousel.Item>
+            <Container className="d-flex p-0 justify-content-center">
+              <EmployeePortrait
+                photoURL={
+                  "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                }
+                points={["10+ years of experience in family law", "...", "..."]}
+              />
+            </Container>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Container>
+              <PhotoText></PhotoText>
+            </Container>
+          </Carousel.Item>
+        </Carousel>
+      </Container>
     </Container>
   );
 }

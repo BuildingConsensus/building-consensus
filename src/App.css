@@ -24,6 +24,10 @@
   background-color: rgba(var(--bg-light-color-rgb), 0.5) !important;
 }
 
+.dark-mask {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--secondary-color);
