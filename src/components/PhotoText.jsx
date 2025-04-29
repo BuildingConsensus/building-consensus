@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Image from "react-bootstrap/Image";
+import "./PhotoText.css";
+import { useState, useLayoutEffect, useRef } from "react";
 
 /*
 variant: "normal" | "reverse"
@@ -8,25 +9,53 @@ variant: "normal" | "reverse"
 */
 export function PhotoText({
   photoURL,
-  altText = "No alt text provided",
   title = "Default Title",
   text = "Default text",
   variant = "normal",
 }) {
+  // Setting the column size based on the variant || 3 for portrait and 7 for landscape
+  const [height, setHeight] = useState(0);
+  const refContainer = useRef();
+  useLayoutEffect(() => {
+    function updateHeight() {
+      setHeight(refContainer.current.offsetHeight);
+    }
+    window.addEventListener("resize", updateHeight);
+    updateHeight();
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+  const imgColSize = 7;
+
   return (
-    <Row className={`flex-row-${variant} mb-3 centered`}>
-      <Col xs={12} lg={7} className="p-0 mb-3">
-        {photoURL && <Image src={photoURL} alt={altText} className="photo" />}
+    // Do not ask me why only if its in portrait mode it needs to have w-100, If it has it in landscape mode it uncenters the entire thing
+    // but in portrait mode without w-100 it squishes the entire thing into the center. I literally have no idea why.
+    <Row
+      className={`flex-row-${variant} mb-3 justify-content-center align-content-center }`}
+    >
+      <Col
+        xs={12}
+        sm={9}
+        lg={imgColSize}
+        className="p-0 photo align-items-center"
+        style={{
+          height: height,
+          backgroundImage: `${photoURL ? `url(${photoURL})` : ""}`,
+        }}
+      >
         {!photoURL && (
-          <Container className="d-flex justify-content-center align-items-center bg-default h-100 vh-50">
-            <h2 className="text-center text-white">Replace with Image</h2>
-          </Container>
+          <h2 className="text-center text-white ">Replace with Image</h2>
         )}
       </Col>
-      <Col className="shadow-lg text-background" xs={12} sm={8} lg={5}>
+      <Col
+        ref={refContainer}
+        className="shadow-lg text-background text-col"
+        xs={12}
+        sm={9}
+        lg={12 - imgColSize}
+      >
         <Row className={`flex-row-${variant} mb-3 `}>
-          <Col xs={12} lg={11} xl={10} className="pt-5 ps-4 text-start">
-            <h2 className="title fs-1 fw-bold text-primary">{title}</h2>
+          <Col xs={12} lg={11} xl={10} className={"pt-5 ps-4 text-start"}>
+            <h2 className={"title fs-1 fw-bold text-primary"}>{title}</h2>
             <p className="text fs-5">{text}</p>
           </Col>
           <Col xs={0} lg={1} xl={2}></Col>

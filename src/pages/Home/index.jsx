@@ -1,11 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { CardComponent } from "./Card";
-import { EmployeeCardComponent } from "./EmployeeCard";
 import { Textbox } from "../../components/Textbox";
+import { Carousel } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import topImg from "../../assets/skyline-cropped.jpg";
-
 import "./Home.css";
+import { EmployeePortrait } from "./EmployeePortrait";
 
 export function Home() {
   return (
@@ -65,32 +65,29 @@ export function Home() {
           />
         </Row>
       </Col>
-      <Row className="flex-nowrap overflow-auto employee-row mt-5">
-        <EmployeeCardComponent
-          name="Marilyn Adsit"
-          phone="(780) 123-4567"
-          email="adsit@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-        <EmployeeCardComponent
-          name="James H."
-          phone="(780) 123-4567"
-          email="james@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-        <EmployeeCardComponent
-          name="Boris Nedev"
-          phone="(780) 123-4567"
-          email="boris@outlook.ca"
-          srcImg={
-            "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-          }
-        />
-      </Row>
+
+      <Container
+        className="d-flex align-items-center flex-column px-0 py-5 bg-default "
+        fluid
+      >
+        <Container className="text-background p-0 shadow-lg ">
+          <h2 className="section-heading mb-0 p-0 dark-mask">Our Team</h2>
+        </Container>
+        <Carousel className="w-100" interval={null}>
+          <Carousel.Item>
+            <Container className="d-flex p-0 justify-content-center">
+              <EmployeePortrait
+                photoURL={
+                  "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                }
+                points={["10+ years of experience in family law", "...", "..."]}
+              />
+            </Container>
+          </Carousel.Item>
+          <Carousel.Item>
+          </Carousel.Item>
+        </Carousel>
+      </Container>
     </Container>
   );
 }
