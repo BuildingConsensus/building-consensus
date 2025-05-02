@@ -23,6 +23,7 @@
 }
 
 .home-container {
+  background-color: var(--bg-light-color);
   background-image: url("../../assets/body-background-tile.png");
 }
 
