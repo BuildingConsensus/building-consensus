@@ -30,7 +30,7 @@ export function PhotoText({
     // Do not ask me why only if its in portrait mode it needs to have w-100, If it has it in landscape mode it uncenters the entire thing
     // but in portrait mode without w-100 it squishes the entire thing into the center. I literally have no idea why.
     <Row
-      className={`flex-row-${variant} mb-3 justify-content-center align-content-center }`}
+      className={`flex-row-${variant} mb-3 justify-content-center align-content-center`}
     >
       <Col
         xs={12}
