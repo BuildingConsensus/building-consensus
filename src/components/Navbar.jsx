@@ -71,11 +71,11 @@ export function Navigationbar() {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/AboutUs"
+              to="/EstateServices"
               onClick={() => setExpanded(false)}
-              active={PathLocationName(true) === "/AboutUs"}
+              active={PathLocationName(true) === "/EstateServices"}
             >
-              About Us
+              Estate Services
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -1,0 +1,10 @@
+.photo {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  padding-bottom: var(--col-height);
+}
+
+.text-col {
+  height: fit-content;
+}

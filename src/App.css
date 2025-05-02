@@ -1,12 +1,13 @@
 /* Global Styles */
 
 :root {
-  --primary-color: #8a1a22;
+  --primary-color: #A71E28;
   /* Dark Red */
-  --secondary-color: #A71E28;
+  --secondary-color: #8a1a22;
   /* Lighter Red */
   --accent-color: #ff6347;
   /* Tomato */
+  --bg-light-color-rgb: 251, 244, 244;
   --bg-light-color: #fbf4f4;
   /* Ivory */
   --bg-brown-color: #3b221c;
@@ -15,9 +16,21 @@
   /* Dark navy/black */
 }
 
+.bg-bar {
+  background-color: var(--secondary-color) !important;
+}
+
+.text-background {
+  background-color: rgba(var(--bg-light-color-rgb), 0.5) !important;
+}
+
+.dark-mask {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
 .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
 
 .btn-primary:hover {
@@ -25,7 +38,30 @@
   border-color: var(--secondary-color);
 }
 
+.bg-primary {
+  background-color: var(--bg-dark-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bg-light-color) !important;
+}
+
+.bg-default {
+  background-color: var(--bg-brown-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.text-black {
+  color: var(--bg-dark-color) !important;
+}
+
 .navbar {
-  background-color: var(--secondary-color);
-  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.vh-50 {
+  height: 50vh !important;
 }
