@@ -63,7 +63,7 @@ export function Home() {
           <CardComponent
             title="Estate Services"
             description={estates_card_text}
-            link="/FamilyMediation"
+            link="/EstateServices"
           />
         </Row>
       </Col>
