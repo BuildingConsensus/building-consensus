@@ -1,19 +1,21 @@
 import Flowers from "../../assets/Flowers.jpg"
+import Court from "../../assets/court-room.jpg"
 import { Container, Row } from "react-bootstrap";
 import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
 
 export function FamilyMediation() {
+  const mediationVsCourtText = <>In mediation, the parties decide the outcome themselves. The focus is on cooperation and communication<br />
+    Mediation can often be scheduled quickly and resolved in hours or days, while court cases can drag on for months or even years.<br />
+    Mediation costs far less than litigation (in legal fees, expert witnesses, court costs, etc.).<br />
+    Mediation is private. What is discussed remains confidential, while court cases are public — court filings and hearings become public records.</>
+
   return (
     <Container fluid className="home-container d-grid gap-5 p-0 pt-4">
       <PhotoText
-        photoURL={Flowers}
-        title="Our Experience"
-        text="We consist of three lawyers who bring a combined 50 years of legal and ADR resolution  experience. 
-          All three have sat before professional tribunals such as the Indian Residential School tribunal,
-          the Human Rights Commission, Rentals Board, and First Nation tribunals.
-          We all have extensive court and litigation experience paired with a complex understanding of principles 
-          of natural justice and court procedures."
+        photoURL={Court}
+        title="Mediation Over Traditional Court"
+        text={mediationVsCourtText}
         variant="normal"
       />
       <Row className="centered justify-content-around my-5">
@@ -36,12 +38,12 @@ export function FamilyMediation() {
         ></Textbox>
       </Row>
       <PhotoText
-        title="Our Experience"
-        text="We consist of three lawyers who bring a combined 50 years of legal and ADR resolution  experience. 
-          All three have sat before professional tribunals such as the Indian Residential School tribunal,
-          the Human Rights Commission, Rentals Board, and First Nation tribunals.
-          We all have extensive court and litigation experience paired with a complex understanding of principles 
-          of natural justice and court procedures."
+        photoURL={Flowers}
+        title="Our Experience in Mediation"
+        text="With years of proven success in mediation, our team offers a practical, cost-effective alternative to litigation by
+          helping clients resolve disputes amicably and efficiently. Our skilled mediators bring deep legal knowledge and a calm,
+          neutral approach to every session, guiding parties toward fair, lasting agreements in matters ranging from family law to
+          business conflicts. Trust our experience to help you find common ground and move forward."
         variant="reverse"
       />
     </Container>
