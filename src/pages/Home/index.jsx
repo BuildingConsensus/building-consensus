@@ -6,6 +6,10 @@ import { Textbox } from "../../components/Textbox";
 import { CardComponent } from "./Card";
 
 export function Home() {
+  const mediation_card_text = <>Resolve your legal conflict peacefully through respectful negotiation <br/><br/> We facilitate conversations and guides all parties toward a mutually acceptable agreement</>;
+  const elections_card_text = <>Is there an dispute with your Band or Council election? <br/> <br/> Our impartial Tribunal services can resolve your election in six months or less</>;
+  const disputes_card_text = <>Do you have a civil dispute? <br/> <br/> Resolve it confidentially and faster than in court, through our mediation, arbitration and tribunal services. </>;
+  const estates_card_text = <>Secure your family's future with confidence—we specialize in  estate planning services, including wills, trusts, power of attorney, and probate guidance.<br/> <br/>Let us help you protect what matters most. </>;
   return (
     <Container fluid className="home-container d-grid gap-2 p-0">
       {/* Our Vision Container */}
@@ -41,24 +45,24 @@ export function Home() {
         <Row className="justify-content-evenly">
           <CardComponent
             title="Election Appeals"
-            description="Resolve band and council elections appeals in 6 months or less."
+            description={elections_card_text}
             link="/ElectionAppeals"
           />
           <CardComponent
             title="Civil Disputes"
-            description="Resolve workplace disputes and grievances."
+            description={disputes_card_text}
             link="/EmploymentMediation"
           />
         </Row>
         <Row className="justify-content-evenly">
           <CardComponent
             title="Family Mediation"
-            description="Family law and court ordered mediations."
+            description={mediation_card_text}
             link="/FamilyMediation"
           />
           <CardComponent
             title="Estate Services"
-            description="Content"
+            description={estates_card_text}
             link="/FamilyMediation"
           />
         </Row>

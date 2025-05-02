@@ -7,8 +7,8 @@ export function CardComponent({ title, description, link }) {
   return (
     <Card className="card">
       <Card.Body>
-        <Card.Title className="mb-3 text-center">{title}</Card.Title>
-        <Card.Text className="text-muted">{description}</Card.Text>
+        <Card.Title className="text-center"><b>{title}</b> <hr/> </Card.Title>
+        <Card.Text><p style={{fontSize: 18}}>{description}</p></Card.Text>
       </Card.Body>
       <Button
         as={Link}
