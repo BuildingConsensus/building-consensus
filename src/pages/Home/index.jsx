@@ -1,23 +1,10 @@
 import "./Home.css";
-import topImg from "../../assets/skyline-cropped.jpg";
 import { Container, Row, Carousel, Image } from "react-bootstrap";
 import { EmployeePortrait } from "./EmployeePortrait";
 import { Textbox } from "../../components/Textbox";
 import { CardComponent } from "./Card";
-import { useState, useLayoutEffect, useRef } from "react";
 
 export function Home() {
-  const [height, setHeight] = useState(0);
-  const ourVisionRef = useRef();
-  useLayoutEffect(() => {
-    function updateHeight() {
-      setHeight(ourVisionRef.current.offsetHeight);
-    }
-    window.addEventListener("resize", updateHeight);
-    updateHeight();
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
-
   const mediation_card_text = <>Resolve your legal conflict peacefully through respectful negotiation <br /><br /> We facilitate conversations and guides all parties toward a mutually acceptable agreement</>;
   const elections_card_text = <>Is there an dispute with your Band or Council election? <br /> <br /> Our impartial Tribunal services can resolve your election in six months or less</>;
   const disputes_card_text = <>Do you have a civil dispute? <br /> <br /> Resolve it confidentially and faster than in court, through our mediation, arbitration and tribunal services. </>;
@@ -25,11 +12,9 @@ export function Home() {
   return (
     <Container fluid className="home-container d-grid p-0">
       {/* Our Vision Container */}
-      <Container fluid className="justify-content-center border border-dark p-0 border-2 position-relative bg-secondary d-none d-md-flex">
-        <Image src={topImg} style={{ height: height }} className="bg-image" />
-        <Container fluid ref={ourVisionRef} className="img-text">
+      <Container className="justify-content-center mt-3 text-background">
           <h2 className="display-5 text-start border-bottom border-dark border-4 mx-5 pt-2">
-            Our Vision
+            <b> Our Vision </b>
           </h2>
           <p className="text-center lead fs-3 py-1 my-1">
             Our mission is to provide independent impartial and substantial consultation
@@ -40,7 +25,6 @@ export function Home() {
           <p className="text-center lead fs-3 py-1 my-1">
             Restoring relationships and keeping the peace
           </p>
-        </Container>
       </Container>
 
       <Row className="centered">
