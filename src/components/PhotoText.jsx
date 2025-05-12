@@ -12,6 +12,7 @@ export function PhotoText({
   title = "Default Title",
   text = "Default text",
   variant = "normal",
+  useTextBackground = true,
 }) {
   // Setting the column size based on the variant || 3 for portrait and 7 for landscape
   const [height, setHeight] = useState(0);
@@ -48,7 +49,9 @@ export function PhotoText({
       </Col>
       <Col
         ref={refContainer}
-        className="shadow-lg text-background text-col"
+        className={`${
+          useTextBackground ? "shadow-lg text-background" : ""
+        } text-col`}
         xs={12}
         sm={9}
         lg={12 - imgColSize}
