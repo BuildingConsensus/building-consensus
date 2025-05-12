@@ -6,6 +6,7 @@ export function Footer() {
   return (
     <Container fluid className="bg-primary">
       <Row className="mx-5 pt-2">
+        {/*
         <Col>
           <h5 className="text-white"> OFFICE LOCATIONS </h5>
           <Row>
@@ -35,6 +36,7 @@ export function Footer() {
             </Col>
           </Row>
         </Col>
+        */}
         <Col>
           <h5 className="text-white"> CONTACT US </h5>
           <Row>
