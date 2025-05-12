@@ -41,8 +41,7 @@ export function Home() {
       </Row>
 
       {/* 4 Cards */}
-      <Col>
-        <Row className="justify-content-evenly">
+        <Row className="centered">
           <CardComponent
             title="Election Appeals"
             description={elections_card_text}
@@ -53,8 +52,6 @@ export function Home() {
             description={disputes_card_text}
             link="/EmploymentMediation"
           />
-        </Row>
-        <Row className="justify-content-evenly">
           <CardComponent
             title="Family Mediation"
             description={mediation_card_text}
@@ -66,7 +63,6 @@ export function Home() {
             link="/EstateServices"
           />
         </Row>
-      </Col>
 
       <Container
         className="d-flex align-items-center flex-column px-0 py-5 bg-default "
