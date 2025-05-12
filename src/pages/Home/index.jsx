@@ -9,7 +9,6 @@ import Flowers from "../../assets/Flowers.jpg";
 import Image from "react-bootstrap/Image";
 import topImg from "../../assets/skyline-cropped.jpg";
 
-
 import "./Home.css";
 import { EmployeePortrait } from "./EmployeePortrait";
 
@@ -34,25 +33,28 @@ export function Home() {
           </p>
         </Container>
       </Container>
-      <Row className="centered justify-content-around my-5 h-100">
-        <Textbox
-          title="What is Mediation?"
-          text="Mediation is a form of assisted negotiation 
+      <Container fluid>
+        <Row className="centered justify-content-around my-5 h-100">
+          <Textbox
+            title="What is Mediation?"
+            text="Mediation is a form of assisted negotiation 
             where a neutral third party, the mediator, 
             helps  disputing parties find a mutually agreeable resolution to their conflict. 
             It's a structured process that allows parties to express their perspectives, explore solutions, 
             and potentially reach a settlement that addresses  their needs."
-          variant="normal"
-        ></Textbox>
-        <Textbox
-          title="Why Mediate?"
-          text="Mediation offers a more collaborative and less formal approach to resolving disputes than going to court. 
+            variant="normal"
+          ></Textbox>
+          <Textbox
+            title="Why Mediate?"
+            text="Mediation offers a more collaborative and less formal approach to resolving disputes than going to court. 
           Mediation is typically quicker, more cost-effective, and results in mutually agreeable solutions. 
           It allows parties to retain control over the outcome and tailor solutions  to their specific needs, 
           fostering a more lasting resolution."
-          variant="normal"
-        ></Textbox>
-      </Row>
+            variant="normal"
+          ></Textbox>
+        </Row>
+      </Container>
+
       <PhotoText
         photoURL={Flowers}
         title="Our Experience"
@@ -63,37 +65,39 @@ export function Home() {
           of natural justice and court procedures."
         variant="normal"
       />
-      <Row className="justify-content-center mt-5">
-        <Textbox
-          title={
-            <>
-              Want to know more?
-              <br />
-              Check out the cards below
-            </>
-          }
-          text=""
-          variant="nobar"
-        ></Textbox>
-      </Row>
+      <Container fluid>
+        <Row className="justify-content-center mt-5">
+          <Textbox
+            title={
+              <>
+                Want to know more?
+                <br />
+                Check out the cards below
+              </>
+            }
+            text=""
+            variant="nobar"
+          ></Textbox>
+        </Row>
 
-      <Row className="centered mb-5">
-        <CardComponent
-          title="Indigenous Election Appeals"
-          description="Resolve band and council elections appeals in 6 months or less."
-          link="/ElectionAppeals"
-        />
-        <CardComponent
-          title="Family Mediation"
-          description="Family law and court ordered mediations."
-          link="/FamilyMediation"
-        />
-        <CardComponent
-          title="Employment Mediation"
-          description="Resolve workplace disputes and grievances."
-          link="/EmploymentMediation"
-        />
-      </Row>
+        <Row className="centered mb-5">
+          <CardComponent
+            title="Indigenous Election Appeals"
+            description="Resolve band and council elections appeals in 6 months or less."
+            link="/ElectionAppeals"
+          />
+          <CardComponent
+            title="Family Mediation"
+            description="Family law and court ordered mediations."
+            link="/FamilyMediation"
+          />
+          <CardComponent
+            title="Employment Mediation"
+            description="Resolve workplace disputes and grievances."
+            link="/EmploymentMediation"
+          />
+        </Row>
+      </Container>
 
       <Container
         className="d-flex align-items-center flex-column px-0 py-5 bg-default "
