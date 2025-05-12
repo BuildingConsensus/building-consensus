@@ -1,32 +1,44 @@
 import "./Home.css";
 import topImg from "../../assets/skyline-cropped.jpg";
-import { Container, Row, Col, Carousel, Image } from "react-bootstrap";
+import { Container, Row, Carousel, Image } from "react-bootstrap";
 import { EmployeePortrait } from "./EmployeePortrait";
 import { Textbox } from "../../components/Textbox";
 import { CardComponent } from "./Card";
+import { useState, useLayoutEffect, useRef } from "react";
 
 export function Home() {
+  const [height, setHeight] = useState(0);
+  const ourVisionRef = useRef();
+  useLayoutEffect(() => {
+    function updateHeight() {
+      setHeight(ourVisionRef.current.offsetHeight);
+    }
+    window.addEventListener("resize", updateHeight);
+    updateHeight();
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
   const mediation_card_text = <>Resolve your legal conflict peacefully through respectful negotiation <br/><br/> We facilitate conversations and guides all parties toward a mutually acceptable agreement</>;
   const elections_card_text = <>Is there an dispute with your Band or Council election? <br/> <br/> Our impartial Tribunal services can resolve your election in six months or less</>;
   const disputes_card_text = <>Do you have a civil dispute? <br/> <br/> Resolve it confidentially and faster than in court, through our mediation, arbitration and tribunal services. </>;
   const estates_card_text = <>Secure your family's future with confidence—we specialize in  estate planning services, including wills, trusts, power of attorney, and probate guidance.<br/> <br/>Let us help you protect what matters most. </>;
   return (
-    <Container fluid className="home-container d-grid gap-2 p-0">
+    <Container fluid className="home-container d-grid p-0">
       {/* Our Vision Container */}
-      <Container fluid="xl" className="justify-content-center d-flex border border-dark p-0 border-2 position-relative bg-secondary d-none d-md-flex">
-        <Image src={topImg} className="bg-image" fluid></Image>
-        <Container fluid className="d-flex img-text flex-column">
-          <h2 className="display-1 text-start border-bottom border-dark border-4 pt-xl-5 mx-5 mt-xxl-5 my-lg-4 mb-md-2 mb-sm-1">
+      <Container fluid className="justify-content-center border border-dark p-0 border-2 position-relative bg-secondary d-none d-md-flex">
+        <Image src={topImg} style={{height: height}} className="bg-image"/>
+        <Container fluid ref={ourVisionRef} className="img-text">
+          <h2 className="display-5 text-start border-bottom border-dark border-4 mx-5 pt-2">
             Our Vision
           </h2>
-          <p className="text-center lead fs-2 my-xl-5 my-lg-4 mb-md-2 mb-sm-1">
+          <p className="text-center lead fs-3 py-1 my-1">
             Our mission is to provide independent impartial and substantial consultation
           </p>
-          <p className="text-center lead fs-2 mb-xl-5 mb-lg-4 mb-md-2 mb-sm-1">
+          <p className="text-center lead fs-3 py-1 my-1">
             We aim to resolve disputes by consensus building in
             communities
           </p>
-          <p className="text-center lead fs-2">
+          <p className="text-center lead fs-3 py-1 my-1">
             Restoring relationships and keeping the peace
           </p>
         </Container>
