@@ -3,15 +3,27 @@ import Sunrise from "../assets/sunrise-book-nobg.png";
 import Skyline from "../assets/skyline-cropped.jpg";
 import "./Logo.css";
 import { Container, Row, Col } from "react-bootstrap";
+import { useState, useLayoutEffect, useRef } from "react";
 
 export function Logo() {
+  const [height, setHeight] = useState(0);
+  const heightRef = useRef();
+  useLayoutEffect(() => {
+    function updateHeight() {
+      setHeight(heightRef.current.offsetHeight);
+    }
+    window.addEventListener("resize", updateHeight);
+    updateHeight();
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
   return (
     <Container
       className="d-flex align-items-center justify-content-center align-p-0"
       fluid
     >
-      <Image src={Skyline} className="bg-image" />
-      <Row className="img-text align-items-center">
+      <Image src={Skyline} style={{height: height}} className="bg-image" />
+      <Row ref={heightRef} className="img-text align-items-center">
         <Image src={Sunrise} className="sunrise-image" />
         <Col className="align-items-start pt-4">
           <h1 className="fw-bold">Building Consensus</h1>
