@@ -1,6 +1,7 @@
 /* Global Styles */
 
 :root {
+  --bs-body-font-family: "Times New Roman", serif;
   --primary-color: #A71E28;
   /* Dark Red */
   --secondary-color: #8a1a22;
