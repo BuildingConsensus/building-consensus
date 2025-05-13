@@ -52,11 +52,13 @@ export function Home() {
           description={mediation_card_text}
           link="/FamilyMediation"
         />
+        {/*
         <CardComponent
           title="Estate Services"
           description={estates_card_text}
           link="/EstateServices"
         />
+        */}
       </Row>
 
       <Container
