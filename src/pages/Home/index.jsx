@@ -5,10 +5,38 @@ import { Textbox } from "../../components/Textbox";
 import { CardComponent } from "./Card";
 
 export function Home() {
-  const mediation_card_text = <>Resolve your legal conflict peacefully through respectful negotiation <br /><br /> We facilitate conversations and guides all parties toward a mutually acceptable agreement</>;
-  const elections_card_text = <>Is there an dispute with your Band or Council election? <br /> <br /> Our impartial Tribunal services can resolve your election in six months or less</>;
-  const disputes_card_text = <>Do you have a civil dispute? <br /> <br /> Resolve it confidentially and faster than in court, through our mediation, arbitration and tribunal services. </>;
-  const estates_card_text = <>Secure your family's future with confidence—we specialize in  estate planning services, including wills, trusts, power of attorney, and probate guidance.<br /> <br />Let us help you protect what matters most. </>;
+  const mediation_card_text = (
+    <>
+      Resolve your legal conflict peacefully through respectful negotiation{" "}
+      <br />
+      <br /> We facilitate conversations and guides all parties toward a
+      mutually acceptable agreement
+    </>
+  );
+  const elections_card_text = (
+    <>
+      Is there an dispute with your Band or Council election? <br /> <br /> Our
+      impartial Tribunal services can resolve your election in six months or
+      less
+    </>
+  );
+  const disputes_card_text = (
+    <>
+      Do you have a civil dispute? <br /> <br /> Resolve it confidentially and
+      faster than in court, through our mediation, arbitration and tribunal
+      services.{" "}
+    </>
+  );
+  const estates_card_text = (
+    <>
+      Secure your family's future with confidence—we specialize in estate
+      planning services, including wills, trusts, power of attorney, and probate
+      guidance.
+      <br /> <br />
+      Let us help you protect what matters most.{" "}
+    </>
+  );
+
   return (
     <Container fluid className="home-container d-grid p-0">
       {/* Our Vision Container */}
@@ -26,17 +54,14 @@ export function Home() {
             Restoring relationships and keeping the peace
           </p>
       </Container>
-
-      <Row className="centered">
-        <Textbox
-          title="Our Services"
-          text=""
-          variant="nobar"
-        ></Textbox>
-      </Row>
+      <Container fluid>
+        <Row className="centered">
+          <Textbox title="Our Services" text="" variant="nobar"></Textbox>
+        </Row>
+      </Container>
 
       {/* 4 Cards */}
-      <Row className="centered">
+      <Row className="centered g-0">
         <CardComponent
           title="Election Appeals"
           description={elections_card_text}
@@ -78,8 +103,6 @@ export function Home() {
                 points={["10+ years of experience in family law", "...", "..."]}
               />
             </Container>
-          </Carousel.Item>
-          <Carousel.Item>
           </Carousel.Item>
         </Carousel>
       </Container>
