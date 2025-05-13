@@ -3,7 +3,6 @@
 }
 
 .sunrise-image {
-  margin: 10px 0;
   width: auto;
 }
 
@@ -24,4 +23,17 @@
 
 .img-text {
   z-index: 2;
+}
+
+/* Can't use CSS variables in a media query.... ( see https://stackoverflow.com/a/40723269 )
+ * Therefore going to hardcode sizes
+ */
+@media screen and (max-width: 490px) {
+  .subtitle { display: none; }
+}
+
+@media screen and (max-width: 420px) {
+  .title { text-align: center; }
+  .parent { height: 13rem; }
+  .bg-image { height: 13rem; }
 }

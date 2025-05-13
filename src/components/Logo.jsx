@@ -11,14 +11,14 @@ export function Logo() {
       fluid
     >
       <Image src={Skyline} className="bg-image" />
-      <Row className="img-text align-items-center">
+      <Row className="img-text align-items-center g-0 justify-content-center">
         <Image src={Sunrise} className="sunrise-image" />
-        <Col className="align-items-start pt-4">
-          <h1 className="fw-bold">Building Consensus</h1>
-          <p className="fs-5 mx-2">
+        <Col>
+          <h1 className="fw-bold title">Building Consensus</h1>
+          <h6 className="mx-2 subtitle">
             Alternative Dispute Resolution Professionals <br />
             Mediation, adjudication, conflict resolution, and tribunal services
-          </p>
+          </h6>
         </Col>
       </Row>
     </Container>
