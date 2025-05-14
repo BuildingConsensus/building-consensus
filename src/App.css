@@ -1,6 +1,7 @@
 /* Global Styles */
 
 :root {
+  --bs-body-font-family: "Times New Roman", serif;
   --primary-color: #A71E28;
   /* Dark Red */
   --secondary-color: #8a1a22;
@@ -22,6 +23,11 @@
 
 .text-background {
   background-color: rgba(var(--bg-light-color-rgb), 0.5) !important;
+}
+
+.background-tile {
+  background-color: var(--bg-light-color);
+  background-image: url("./assets/body-background-tile.png");
 }
 
 .dark-mask {

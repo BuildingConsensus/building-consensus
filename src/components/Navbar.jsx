@@ -69,14 +69,6 @@ export function Navigationbar() {
             >
               Employment Mediation
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/EstateServices"
-              onClick={() => setExpanded(false)}
-              active={PathLocationName(true) === "/EstateServices"}
-            >
-              Estate Services
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
