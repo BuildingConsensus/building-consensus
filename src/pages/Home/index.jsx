@@ -38,21 +38,22 @@ export function Home() {
   );
 
   return (
-    <Container fluid className="home-container d-grid p-0">
+    <Container fluid className="background-tile d-grid p-0">
       {/* Our Vision Container */}
       <Container className="justify-content-center mt-3 text-background">
-          <h2 className="display-5 text-start border-bottom border-dark border-4 mx-5 pt-2">
-            <b> Our Vision </b>
-          </h2>
-          <p className="text-center lead fs-3 py-1 my-1">
-            Our mission is to provide independent impartial and substantial consultation
-          </p>
-          <p className="text-center lead fs-3 py-1 my-1">
-            We aim to make our services accessible to all communities
-          </p>
-          <p className="text-center lead fs-3 py-1 my-1">
-            Restoring relationships and keeping the peace
-          </p>
+        <h2 className="display-5 text-start border-bottom border-dark border-4 mx-5 pt-2">
+          <b> Our Vision </b>
+        </h2>
+        <p className="text-center lead fs-3 py-1 my-1">
+          Our mission is to provide independent impartial and substantial
+          consultation
+        </p>
+        <p className="text-center lead fs-3 py-1 my-1">
+          We aim to make our services accessible to all communities
+        </p>
+        <p className="text-center lead fs-3 py-1 my-1">
+          Restoring relationships and keeping the peace
+        </p>
       </Container>
       <Container fluid>
         <Row className="centered">

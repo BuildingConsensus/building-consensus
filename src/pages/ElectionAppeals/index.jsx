@@ -16,7 +16,7 @@ import { PhotoText } from "../../components/PhotoText";
 
 export function ElectionAppeals() {
   return (
-    <Container fluid>
+    <Container fluid className="background-tile">
       <Row className="p-lg-5 p-3 mb-5">
         <Col xs="auto" lg={6} className="border rounded-3 border-dark mb-5">
           <h1 className="text-center fs-2 fw-bold">
