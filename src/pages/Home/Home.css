@@ -36,14 +36,18 @@
   
 .bg-image {
   background-image: url("../../assets/skyline-cropped.jpg");
+  object-fit: cover;
   background-position: center;
   background-size: cover;
   filter: blur(4px);
   opacity: 0.4;
-}
-
-.img-text {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.img-text {
+  z-index: 2;
 }

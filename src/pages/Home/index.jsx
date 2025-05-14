@@ -1,6 +1,5 @@
 import "./Home.css";
-import topImg from "../../assets/skyline-cropped.jpg";
-import { Container, Row, Col, Carousel, Image } from "react-bootstrap";
+import { Container, Row, Carousel, Image } from "react-bootstrap";
 import { EmployeePortrait } from "./EmployeePortrait";
 import { Textbox } from "../../components/Textbox";
 import { CardComponent } from "./Card";
@@ -37,29 +36,23 @@ export function Home() {
       Let us help you protect what matters most.{" "}
     </>
   );
+
   return (
-    <Container fluid className="home-container d-grid gap-2 p-0">
+    <Container fluid className="home-container d-grid p-0">
       {/* Our Vision Container */}
-      <Container
-        fluid="xl"
-        className="justify-content-center d-flex border border-dark p-0 border-2 position-relative bg-secondary d-none d-md-flex"
-      >
-        <Image src={topImg} className="bg-image" fluid></Image>
-        <Container fluid className="d-flex img-text flex-column">
-          <h2 className="display-1 text-start border-bottom border-dark border-4 pt-xl-5 mx-5 mt-xxl-5 my-lg-4 mb-md-2 mb-sm-1">
-            Our Vision
+      <Container className="justify-content-center mt-3 text-background">
+          <h2 className="display-5 text-start border-bottom border-dark border-4 mx-5 pt-2">
+            <b> Our Vision </b>
           </h2>
-          <p className="text-center lead fs-2 my-xl-5 my-lg-4 mb-md-2 mb-sm-1">
-            Our mission is to provide independent impartial and substantial
-            consultation
+          <p className="text-center lead fs-3 py-1 my-1">
+            Our mission is to provide independent impartial and substantial consultation
           </p>
-          <p className="text-center lead fs-2 mb-xl-5 mb-lg-4 mb-md-2 mb-sm-1">
-            We aim to resolve disputes by consensus building in communities
+          <p className="text-center lead fs-3 py-1 my-1">
+            We aim to make our services accessible to all communities
           </p>
-          <p className="text-center lead fs-2">
+          <p className="text-center lead fs-3 py-1 my-1">
             Restoring relationships and keeping the peace
           </p>
-        </Container>
       </Container>
       <Container fluid>
         <Row className="centered">
@@ -68,34 +61,30 @@ export function Home() {
       </Container>
 
       {/* 4 Cards */}
-      <Container fluid>
-        <Col>
-          <Row className="justify-content-evenly">
-            <CardComponent
-              title="Election Appeals"
-              description={elections_card_text}
-              link="/ElectionAppeals"
-            />
-            <CardComponent
-              title="Civil Disputes"
-              description={disputes_card_text}
-              link="/EmploymentMediation"
-            />
-          </Row>
-          <Row className="justify-content-evenly">
-            <CardComponent
-              title="Family Mediation"
-              description={mediation_card_text}
-              link="/FamilyMediation"
-            />
-            <CardComponent
-              title="Estate Services"
-              description={estates_card_text}
-              link="/EstateServices"
-            />
-          </Row>
-        </Col>
-      </Container>
+      <Row className="centered g-0">
+        <CardComponent
+          title="Election Appeals"
+          description={elections_card_text}
+          link="/ElectionAppeals"
+        />
+        <CardComponent
+          title="Civil Disputes"
+          description={disputes_card_text}
+          link="/EmploymentMediation"
+        />
+        <CardComponent
+          title="Family Mediation"
+          description={mediation_card_text}
+          link="/FamilyMediation"
+        />
+        {/*
+        <CardComponent
+          title="Estate Services"
+          description={estates_card_text}
+          link="/EstateServices"
+        />
+        */}
+      </Row>
 
       <Container
         className="d-flex align-items-center flex-column px-0 py-5 bg-default "
@@ -115,7 +104,6 @@ export function Home() {
               />
             </Container>
           </Carousel.Item>
-          <Carousel.Item></Carousel.Item>
         </Carousel>
       </Container>
     </Container>

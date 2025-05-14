@@ -22,7 +22,6 @@ function App() {
               path="/EmploymentMediation"
               element={<EmploymentMediation />}
             />
-            <Route path="/EstateServices" element={<EstateServices />} />
           </Route>
         </Routes>
       </Router>
