@@ -25,6 +25,11 @@
   background-color: rgba(var(--bg-light-color-rgb), 0.5) !important;
 }
 
+.background-tile {
+  background-color: var(--bg-light-color);
+  background-image: url("./assets/body-background-tile.png");
+}
+
 .dark-mask {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
