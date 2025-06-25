@@ -68,11 +68,13 @@ export function Home() {
           description={elections_card_text}
           link="/ElectionAppeals"
         />
+        {/*
         <CardComponent
           title="Civil Disputes"
           description={disputes_card_text}
           link="/EmploymentMediation"
         />
+        */}
         <CardComponent
           title="Family Mediation"
           description={mediation_card_text}
