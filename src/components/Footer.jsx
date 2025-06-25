@@ -37,35 +37,23 @@ export function Footer() {
           </Row>
         </Col>
         */}
-        <Col>
-          <h5 className="text-white"> CONTACT US </h5>
-          <Row>
-            <Col md={2}>
-              <p className="text-white"> Marilyn P. Adsit:</p>
-            </Col>
-            <Col>
-              <p className="text-white">
-                780-123-4567 <br />
-                adsit@outlook.ca
-              </p>
-            </Col>
-          </Row>
-          <Row className="mt-2">
-            <Col md={2}>
-              <p className="text-white"> Partner 2:</p>
-            </Col>
-            <Col>
-              <p className="text-white">
-                780-123-4567 <br />
-                adsit@outlook.ca
-              </p>
-            </Col>
-          </Row>
+        <Col className="text-white">
+          <h4> Contact Us </h4>
+          <h4> Reach Out to Building Consensus </h4>
+          <h5> Building Consensus </h5>
+            <p>
+                Tel: +1 (306) 307-2979 <br/>
+                Fax: +1 (306) 801-7711 <br/>
+                Email: admin@buildingconsensus.ca
+            </p>
           {/* TODO: link to facebook page once created.*/}
           <a href="https://www.facebook.com">
             <Image src={Facebook} width="50px" height="50px" />
           </a>
         </Col>
+      </Row>
+      <Row className="mt-2 px-5">
+        <p className="text-white"> © 2025 – Building Consensus   </p>
       </Row>
     </Container>
   );
