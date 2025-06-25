@@ -2,16 +2,13 @@
 import Image from "react-bootstrap/Image";
 import { Col, Container, Row } from "react-bootstrap";
 
-// DO NOT USE THIS IMAGE IT IS NOT FREE USE CHANGE IT LATER
-// --------------------------------------------------------
-import Steps from "../../assets/Steps Diagram.png";
-// --------------------------------------------------------
-
+import MedicineWheel from "../../assets/medicine-wheel.png";
 import CircleNumber1 from "../../assets/CircleNumber1.png";
 import CircleNumber2 from "../../assets/CircleNumber2.png";
 import CircleNumber3 from "../../assets/CircleNumber3.png";
 import CircleNumber4 from "../../assets/CircleNumber4.png";
-import { PhotoText } from "../../components/PhotoText";
+
+// import { PhotoText } from "../../components/PhotoText";
 import { Textbox } from "../../components/Textbox";
 import { CardComponent } from "../../components/Card";
 
@@ -114,7 +111,7 @@ export function ElectionAppeals() {
           </Row>
         </Col>
         <Col className="align-self-center text-center pt-3">
-          <Image src={Steps} fluid />
+          <Image src={MedicineWheel} fluid />
         </Col>
       </Row>
       <Row className="centered">
