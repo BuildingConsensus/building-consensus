@@ -2,7 +2,7 @@ import "./Home.css";
 import { Container, Row, Carousel, Image } from "react-bootstrap";
 import { EmployeePortrait } from "./EmployeePortrait";
 import { Textbox } from "../../components/Textbox";
-import { CardComponent } from "./Card";
+import { CardComponent } from "../../components/Card";
 
 export function Home() {
   const mediation_card_text = (
